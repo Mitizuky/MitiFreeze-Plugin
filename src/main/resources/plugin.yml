@@ -1,0 +1,16 @@
+name: MitiFreeze
+version: '1.0'
+main: br.com.mitizuky.mitiFreeze.MitiFreeze
+commands:
+  freeze:
+    description: "Congela um jogador."
+    permission: miti.freeze
+
+  unfreeze:
+    description: "Descongela um jogador."
+    permission: miti.freeze
+
+permissions:
+  miti.freeze:
+    description: "Permite o uso do comando /freeze e /unfreeze"
+    default: op
