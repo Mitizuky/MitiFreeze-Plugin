@@ -27,7 +27,7 @@ public class Commands implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "Uso: /freeze <jogador>");
                     return false;
                 }
-                //Store target string player name at position 0 of args
+                //Stores target string player name at position 0 of args
                 String targetPlayerName = args[0];
                 //Getting target player name
                 Player targetPlayer = JavaPlugin.getPlugin(MitiFreeze.class).getServer().getPlayer(targetPlayerName);
@@ -63,7 +63,7 @@ public class Commands implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "Uso: /freeze <jogador>");
                     return false;
                 }
-                //Store target string player name at position 0 of args
+                //Stores target string player name at position 0 of args
                 String targetPlayerName = args[0];
                 //Getting target player name
                 Player targetPlayer = JavaPlugin.getPlugin(MitiFreeze.class).getServer().getPlayer(targetPlayerName);
