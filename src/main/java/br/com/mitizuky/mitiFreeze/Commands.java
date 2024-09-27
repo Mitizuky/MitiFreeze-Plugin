@@ -36,7 +36,7 @@ public class Commands implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "Jogador não encontrado!");
                     return false;
                 }
-                //If player has found, that player will be freezed
+                //If player is found, that player will be freezed
                 else {
                         Bukkit.broadcastMessage(ChatColor.GOLD + player.getName() + ChatColor.DARK_PURPLE + " congelou " + ChatColor.GOLD + targetPlayer.getName());
                         targetPlayer.setWalkSpeed(0); //Freeze
@@ -72,7 +72,7 @@ public class Commands implements CommandExecutor {
                     player.sendMessage(ChatColor.RED + "Jogador não encontrado!");
                     return false;
                 }
-                //If player has found, that player will be unfreezed
+                //If player is found, that player will be unfreezed
                 else {
                     Bukkit.broadcastMessage(ChatColor.GOLD + player.getName() + ChatColor.AQUA + " descongelou " + ChatColor.GOLD + targetPlayer.getName());
                     targetPlayer.setWalkSpeed(0.2f); //Unfreeze
