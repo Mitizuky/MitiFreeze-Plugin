@@ -40,6 +40,7 @@ public class Commands implements CommandExecutor {
                 else {
                         Bukkit.broadcastMessage(ChatColor.GOLD + player.getName() + ChatColor.DARK_PURPLE + " congelou " + ChatColor.GOLD + targetPlayer.getName());
                         targetPlayer.setWalkSpeed(0); //Freeze
+                        MitiFreeze.freezedPlayers.add(targetPlayer.getUniqueId()); //Add target to freezed players list
                         //Prevents player flight
                         if (targetPlayer.getAllowFlight()) {
                             targetPlayer.setAllowFlight(false);
@@ -75,6 +76,7 @@ public class Commands implements CommandExecutor {
                 else {
                     Bukkit.broadcastMessage(ChatColor.GOLD + player.getName() + ChatColor.AQUA + " descongelou " + ChatColor.GOLD + targetPlayer.getName());
                     targetPlayer.setWalkSpeed(0.2f); //Unfreeze
+                    MitiFreeze.freezedPlayers.remove(targetPlayer.getUniqueId()); //Remove target to freezed players list
                     //Reactive flight
                     if (!targetPlayer.getAllowFlight()) {
                         targetPlayer.setAllowFlight(true);
